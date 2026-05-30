@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="registration.js"></script>
+    <style>
+
+        input{
+            border-bottom: 2px solid black;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+        .container{
+            position:relative;
+            left:40%;
+            background-color:aliceblue;
+            border:3px solid black;
+            border-radius:4px;
+             width:400px;
+            height:100px
+        }
+        input[type="input"]{
+            background-color: transparent;
+        }
+        img{
+            position:relative;
+            top:0px;
+            left:41%;
+        }
+        .master{
+            position:relative;
+            right:-47%;
+        }
+        .cont{
+               position:relative;
+            left:40%;
+            background-color:aliceblue;
+            border:3px solid black;
+            border-radius:4px;
+             width:400px;
+            height:400px;
+
+        }
+       #container4:has(#mobile:invalid){
+        border:3px solid red
+        }
+        #container4:has(#mobile:invalid) #span4s{
+            display:block;
+        }
+        button[type="button"]{
+            position: absolute;
+            left:40%;
+            background-color: purple;
+            color:black;
+            width:100px;
+            height:30px;
+        }
+    </style>
+</head>
+<body id="b1">
+    <img src="https://img.freepik.com/premium-vector/national-tug-war-day-illustration_1178600-19183.jpg?w=360" >
+    <h2 class="master"> TUG OF WAR</h2>
+    <div class="cont">
+        <h2 >Team Composition & Structure</h2>
+        <ul>
+            <li><b>Team Size</b>: Standard competition teams usually consist of 8 pullers, though some formats allow for 6 or up to 10-12 (including substitutes).</li>
+            <li><b>substitutes</b>: Teams may register 1-2 substitutes (squad of 10), depending on the specific event rules.</li>
+            <li><b>Gender</b>: Many competitions feature separate men's and women's categories. Mixed categories (e.g., 4 men + 4 women) are also common, with specific rules regarding team composition, such as requiring a minimum of two women per team.</li>
+            <li><b>Role Designation</b>: Registration forms must indicate a team captain. </li>
+            <li><b>weight Classes</b>: Examples include Lightweight (560 kg), Middleweight (640 kg), and Heavyweight (720 kg).</li>
+        </ul>
+    </p>
+    </div><br><br>
+    <form >
+    <div class="container" id="container1">
+        NAME<sup>*</sup><br><br>
+        <input type="text" id="name" placeholder="your answer"><br><br>
+        <span id="span1" style="display:none; color:red">!this field is required</span>
+    </div><br><br>
+     <div class="container" id="container2">
+        ROLLNO<sup>*</sup><br><br>
+        <input type="text" id="ROLL" placeholder="your answer"><br><br>
+        <span id="span2" style="display:none; color:red">!this field is required</span>
+    </div><br><br>
+    <div class="container" id="container3">
+        CURRENT YEAR<sup>*</sup><br><br>
+        <input type="radio" name="year" id="year" value="1st year"> 1ST<br>
+        <input type="radio" name="year" id="year" value="2nd year"> 2ND<br>
+        <span id="span3" style="display:none; color:red">!this field is required</span>
+    </div><br><br>
+    <div class="container" id="container4">
+        MOBILE NUMBER<sup>*</sup><br><br>
+        <input type="text" id="mobile" placeholder="your answer" pattern="[0-9]{10}" required><br>
+          <span id="span4" style="display:none; color:red">!this field is required</span>
+          <span id="span4s" style="display:none; color:red">!invalid mobile number</span>
+    </div><br><br>
+    <div class="container" id="container5">
+        EMAIL ID<sup>*</sup><br><br>
+        <input type="text" id="email" placeholder="your answer"><br>
+         <span id="span5" style="display:none; color:red">!this field is required</span>
+    </div><br><br>
+    <div class="container" id="container6">
+        1st preference<sup>*</sup><br<br>
+        <select id="domain" name="domain" placeholder="your answer">
+            <option value="your answer">your answer</option>
+            <option value="Web team">WEB TEAM</option>
+            <option value="Technical team">TECHNICAL TEAM</option>
+            <option value="pr">PR</option>
+            <option value="Sponsor">SPONSOR</option>
+            <option value="team managmnet">TEAM MANAGEMENT</option>
+            <option value="Content">Content</option>
+            <option value="Design">DESIGN</option>
+            <option value="ML">ML</option>
+        </select>
+          <span id="span6" style="display:none; color:red">!this field is required</span>
+    </div><br><br>
+    <div class="container" id="container7">
+        2nd preference<sup>*</sup><br<br>
+        <select id="domain1" name="domain" placeholder="your answer">
+            <option value="your answer">your answer</option>
+            <option value="Web team">WEB TEAM</option>
+            <option value="Technical team">TECHNICAL TEAM</option>
+            <option value="pr">PR</option>
+            <option value="Sponsor">SPONSOR</option>
+            <option value="team managmnet">TEAM MANAGEMENT</option>
+            <option value="Content">Content</option>
+            <option value="Design">DESIGN</option>
+            <option value="ML">ML</option>
+        </select>
+          <span id="span7" style="display:none; color:red">!this field is required</span>
+    </div>
+    <button type="button" id="submit">submit</button>
+    </form>
+</body>
+</html>
